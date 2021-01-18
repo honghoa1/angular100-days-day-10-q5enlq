@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<input #nameInput type="text" [ngModel]="name" (ngModelChange)="name = $event">
+
+<button (click)="showLast = !showLast">Toggle show last</button>
+
+<!-- toggleComp la instance cua ToggleComponent -->
+<toggle [(checked)]="isChecked"></toggle>
+<toggle [(checked)]="isChecked"></toggle>
+<toggle [(checked)]="isChecked"></toggle>
+<ng-container *ngIf="showLast">
+  <toggle [(checked)]="isChecked"></toggle>
+</ng-container>
+
+
